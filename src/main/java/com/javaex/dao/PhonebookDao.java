@@ -2,7 +2,7 @@ package com.javaex.dao;
 
 import java.util.List;
 
-import org.apache.catalina.Session;
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -12,7 +12,7 @@ import com.javaex.vo.PersonVo;
 public class PhonebookDao {
 
 	@Autowired
-	private Session sqlSession;
+	private SqlSession sqlSession;
 
 	public List<PersonVo> selectList() {
 		System.out.println("PhonebookDao.selectList()");
