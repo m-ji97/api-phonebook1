@@ -17,7 +17,7 @@ public class PhonebookDao {
 	public List<PersonVo> selectList() {
 		System.out.println("PhonebookDao.selectList()");
 
-		return  sqlSession.selectList("phonebook.select");
+		return sqlSession.selectList("phonebook.select");
 	}
 
 }
