@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<!-- PersonVo 매핑 -->
+	<mapper namespace="phonebook">
+		<resultMap id="resultPersonVo" type="com.javaex.vo.PersonVo">
+			<result column="person_id" property="personId"></result>
+			<result column="name" property="name"></result>
+			<result column="hp" property="hp"></result>
+			<result column="company" property="company"></result>
+		</resultMap>
+
+   <!-- 전체리스트 가져오기 -->
+   <select id="select" resultType="PersonVo">
+   		<![CDATA[
+	   		select person_id personId,
+	   				name,
+	   				hp,
+	   				company
+	   		from person
+   		]]>
+   </select>
+</mapper>

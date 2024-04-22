@@ -19,7 +19,7 @@ public class PhonebookController {
 	public List<PersonVo> list() {
 		System.out.println("PhonebookController.list");
 		
-		List<PersonVo> phonebookList = phonebookService.exelist();
+		List<PersonVo> phonebookList = phonebookService.exeList();
 		
 		return phonebookList;
 	}
